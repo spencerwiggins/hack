@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import { ContentSend } from 'material-ui/svg-icons';
 
 const style = {
   button: {
@@ -21,7 +22,7 @@ const Send = function Send () {
       style={style.button}
       type="submit"
     >
-      Send
+      <ContentSend color="#fff" />
     </button>
   );
 };
