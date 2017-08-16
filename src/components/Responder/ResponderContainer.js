@@ -28,12 +28,12 @@ class ResponderContainer extends React.Component {
     const {
       potentialNextUserMessage,
       chatMessagesActions,
-      conversationId,
+      // conversationId,
     } = this.props;
 
     const {
       text,
-      sender,
+      // sender,
     } = potentialNextUserMessage;
 
     const message = {

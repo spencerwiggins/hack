@@ -73,27 +73,6 @@ export function addConversationId(id: string): ReduxStandardAction<{ id: string 
   };
 }
 
-/**
- * Init chat
- *
- * @param {Object} options
- */
-export function initChat(options: { agent: string, restart: boolean}): ReduxThunkFunction<*> {
-  return (dispatch, getState) => {
-    const {
-      agent,
-      restart,
-    } = options;
-
-    // socket.emit('chat.init', {
-    //   agent,
-    //   chatBotOptions: {
-    //     agent,
-    //     restart,
-    //   },
-    // });
-  };
-}
 
 /**
  * Toggle voice interactive
@@ -120,7 +99,6 @@ export function toggleCapturingAudio(): ReduxStandardAction<Object> {
  *
  */
 export function setMessageMounted(message: ChatMessage): ReduxStandardAction<{ message: ChatMessage}> {
-  console.log('setMessageMounted called', message);
   return {
     type: types.SET_MESSAGE_MOUNTED,
     payload: {

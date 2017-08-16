@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as chatMessagesActions from '../../eil-client-chat-state/src/actions/chatMessagesActions';
 import { Messages } from './';
-import { mountedMessages } from '../../selectors';
+// import { mountedMessages } from '../../selectors';
 
 class MessagesContainer extends React.Component {
 

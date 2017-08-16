@@ -2,7 +2,7 @@
 import React from 'react';
 import Input from '../Input';
 import Send from '../Send';
-import VoiceControl from '../VoiceControl';
+// import VoiceControl from '../VoiceControl';
 // import SpeechRecognizer from '../SpeechRecognizer';
 
 const style = {

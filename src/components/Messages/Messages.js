@@ -33,14 +33,15 @@ const Messages = function Messages (props: Props) {
         messages.map(m => {
           const {
             sender,
-            id,
+            text,
           } = m;
+
           if (botNames.includes(sender)) {
             // Overwrite sender to have consistency (see MessageLoader@componentDidMount)
             m.sender = 'bot';
-            return <BotMessage key={id} message={m} />;
+            return <BotMessage key={text} message={m} />;
           } else {
-            return <UserMessage key={id} message={m} />;
+            return <UserMessage key={text} message={m} />;
           }
         })
       }

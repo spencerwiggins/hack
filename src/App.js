@@ -4,7 +4,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  // Link
 } from 'react-router-dom';
 // import {
 //   // registerSocketListeners,
