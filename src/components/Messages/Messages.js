@@ -15,7 +15,8 @@ const style = {
     flex: 1,
     flexDirection: 'column',
     padding: 10,
-    fontSize: '3vmin',
+    fontSize: '4vmin',
+    overflow: 'scroll',
   },
 };
 
@@ -25,28 +26,33 @@ const botNames = [
   'Evie',
 ];
 
-const Messages = function Messages (props: Props) {
-  const { messages } = props;
-  return (
-    <div style={style.container}>
-      {
-        messages.map(m => {
-          const {
-            sender,
-            text,
-          } = m;
+export default class Messages extends React.Component {
+  componentDidUpdate() {
+    this.refs.bottomOfContainer.scrollIntoView(false);
+  }
 
-          if (botNames.includes(sender)) {
-            // Overwrite sender to have consistency (see MessageLoader@componentDidMount)
-            m.sender = 'bot';
-            return <BotMessage key={text} message={m} />;
-          } else {
-            return <UserMessage key={text} message={m} />;
-          }
-        })
-      }
-    </div>
-  );
+  render() {
+    const { messages } = this.props;
+    return (
+      <div style={style.container}>
+        {
+          messages.map(m => {
+            const {
+              sender,
+              text,
+            } = m;
+
+            if (botNames.includes(sender)) {
+              // Overwrite sender to have consistency (see MessageLoader@componentDidMount)
+              m.sender = 'bot';
+              return <BotMessage key={text} message={m} />;
+            } else {
+              return <UserMessage key={text} message={m} />;
+            }
+          })
+        }
+        <div ref="bottomOfContainer" />
+      </div>
+    );
+  }
 };
-
-export default Messages;
