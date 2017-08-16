@@ -2,7 +2,7 @@
 import * as types from '../constants/ActionTypes';
 // console.log(types);
 
-import type { ChatMessage } from '../../types';
+// import type { ChatMessage } from '../../types';
 
 /**
  * Add chat message
@@ -18,6 +18,16 @@ export function addChatMessage(message: ChatMessage): ReduxStandardAction<{ mess
   };
 }
 
+export function nextBotMessage(): ReduxStandardAction<{ message: ChatMessage }> {
+  return (dispatch, getState) => {
+    const { botMessages } = getState().chatMessagesState;
+    if (botMessages && botMessages.length) {
+      const message = botMessages.shift();
+      dispatch(addChatMessage(message));
+    }
+  }
+}
+
 /**
  * Emit user chat message
  *
@@ -29,10 +39,6 @@ export function addChatMessage(message: ChatMessage): ReduxStandardAction<{ mess
  * @param {string} conversationId
  */
 export function emitUserChatMessage(message: ChatMessage, conversationId: string): ReduxThunkFunction<*> {
-  console.log('emitUserChatMessage', message);
-  // return (dispatch, getState, { socket } = {}) => {
-  //   socket.emit('chat.message.add', conversationId, message);
-  // };
   return (dispatch) => {
     dispatch(addChatMessage(message))
   }

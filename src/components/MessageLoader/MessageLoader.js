@@ -33,11 +33,9 @@ const messageLoader: HOC = function messageLoader (options = DEFAULT_OPTIONS) {
 
       componentDidMount() {
         const { message: {sender} } = this.props;
-        console.log('sender', sender);
         if(sender === 'bot') {
           this.startTimer();
         } else {
-          console.log('setReached');
           this.setReached(true);
         }
       }

@@ -27,7 +27,6 @@ const botNames = [
 
 const Messages = function Messages (props: Props) {
   const { messages } = props;
-  console.log('messages', messages);
   return (
     <div style={style.container}>
       {

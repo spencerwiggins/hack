@@ -1,6 +1,11 @@
 // @flow
 import React from 'react';
 import { Provider as ReduxProvider } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 // import {
 //   // registerSocketListeners,
 //   // reduxDependencies,
@@ -13,6 +18,7 @@ import {
 import thunk from 'redux-thunk';
 import { reducers } from './eil-client-chat-state';
 import Window from './components/Window';
+import About from './components/About';
 
 const store = createStore(reducers, {}, compose(
     applyMiddleware(
@@ -28,7 +34,12 @@ const store = createStore(reducers, {}, compose(
 const App = function App () {
   return (
     <ReduxProvider store={store}>
-      <Window />
+      <Router>
+        <div>
+          <Route exact path="/" component={Window}/>
+          <Route path="/about" component={About}/>
+        </div>
+      </Router>
     </ReduxProvider>
   );
 };

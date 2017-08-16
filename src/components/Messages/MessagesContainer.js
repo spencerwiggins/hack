@@ -12,7 +12,6 @@ class MessagesContainer extends React.Component {
 
   render() {
     const { messages } = this.props;
-    console.log('messages', messages);
 
     return (
       <Messages
@@ -23,7 +22,6 @@ class MessagesContainer extends React.Component {
 }
 
 const mapStateToProps = (state: ReduxState) => {
-  console.log('state', state);
   return {
     // messages: mountedMessages(state)
     messages: state.chatMessagesState.messages

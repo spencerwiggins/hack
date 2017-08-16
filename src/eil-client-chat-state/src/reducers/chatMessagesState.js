@@ -8,6 +8,16 @@ import { findMessageIndex } from '../businessLogic';
 
 const initialState = {
   potentialNextUserMessage: null,
+  botMessages: [
+    {
+      text: 'next bot message',
+      sender: 'bot',
+    },
+    {
+      text: 'yet another bot message',
+      sender: 'bot',
+    },
+  ],
   messages: [
     {
       text: 'hello',
@@ -71,6 +81,13 @@ export default function chatMessagesState(state: ChatMessagesState = initialStat
         messages: {$set: messagesCopy}
       });
     }
+
+    // case 'NEXT_BOT_MESSAGE': {
+    //   console.log('nextBotMessage!');
+    //   if (state.botMessages) {
+    //
+    //   }
+    // }
 
     default:
       return state;

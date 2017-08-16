@@ -43,6 +43,7 @@ class ResponderContainer extends React.Component {
 
     // console.log('message', message);
     chatMessagesActions.addChatMessage(message);
+    chatMessagesActions.nextBotMessage();
     // chatMessagesActions.setMessageMounted(message)
   }
 
