@@ -14,6 +14,7 @@ const style = {
     padding: 10,
     borderRadius: 5,
     marginBottom: 15,
+    boxShadow: '0 0 4px #ddd',
   },
 };
 
@@ -33,7 +34,7 @@ const Message = function Message (props: Props) {
     <div style={{...style.container, ...propStyle}}>
       {text}
       {
-        listings && listings.map(l => <Listing listing={l} />)
+        listings && listings.map((l, i) => <Listing key={i} listing={l} />)
       }
     </div>
   );

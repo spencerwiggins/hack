@@ -27,7 +27,7 @@ const OtherDetails = function OtherDetails (props: Props) {
   return (
     <div style={style.container}>
       <div>
-        { ratingArray.fill('2').map(r => <StarIcon color="#fff" />) }
+        { ratingArray.fill('2').map((r, i) => <StarIcon key={i} color="#fff" />) }
       </div>
       <CertIcon color="#fff" />
     </div>

@@ -5,8 +5,47 @@ import * as types from '../constants/ActionTypes';
 import type { ChatMessagesState } from '../../types';
 import { findMessageIndex } from '../businessLogic';
 
+
+const listings = [
+  {
+    title: 'Pines Lodge',
+    address: {
+      street: '2342 Pine Drive',
+      zip: '63105',
+      state: 'MO',
+      city: 'Clayton',
+    },
+    details: {
+      bed: '3',
+      bath: '2'
+    },
+    price: '$900/mo',
+    link: '/details/1',
+    image: '//photos.zillowstatic.com/p_h/IS2jf3s0j1zmrf1000000000.jpg',
+    rating: 4,
+  },
+  {
+    title: 'Lodge Hill',
+    address: {
+      street: '6762 Lodge Drive',
+      zip: '63105',
+      state: 'MO',
+      city: 'Clayton',
+    },
+    details: {
+      bed: '3',
+      bath: '2'
+    },
+    price: '$850/mo',
+    link: '/details/2',
+    image: '//photos.zillowstatic.com/p_h/IS66w2m64uer5z0000000000.jpg',
+    rating: 3,
+  }
+];
+
 const initialState = {
   potentialNextUserMessage: null,
+  listings,
   botMessages: [
     {
       text: 'We see that you have two children and are looking for a 3 bedroom.  Is that correct?',
@@ -22,42 +61,7 @@ const initialState = {
   messages: [
     {
       sender: 'bot',
-      listings: [
-        {
-          title: 'Pines Lodge',
-          address: {
-            street: '2342 Pine Drive',
-            zip: '63105',
-            state: 'MO',
-            city: 'Clayton',
-          },
-          details: {
-            bed: '3',
-            bath: '2'
-          },
-          price: '$900/mo',
-          link: '/about',
-          image: '//photos.zillowstatic.com/p_h/IS2jf3s0j1zmrf1000000000.jpg',
-          rating: 4,
-        },
-        {
-          title: 'Lodge Hill',
-          address: {
-            street: '6762 Lodge Drive',
-            zip: '63105',
-            state: 'MO',
-            city: 'Clayton',
-          },
-          details: {
-            bed: '3',
-            bath: '2'
-          },
-          price: '$850/mo',
-          link: '/about',
-          image: '//photos.zillowstatic.com/p_h/IS66w2m64uer5z0000000000.jpg',
-          rating: 3,
-        }
-      ]
+      listings
     },
     // {
     //   text: 'How can Gyde help you?',

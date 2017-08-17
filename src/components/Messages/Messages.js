@@ -8,7 +8,7 @@ const style = {
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-    padding: 10,
+    padding: 15,
     fontSize: '4vmin',
     overflow: 'scroll',
   },
@@ -29,7 +29,7 @@ export default class Messages extends React.Component {
     return (
       <div style={style.container}>
         {
-          messages.map(m => {
+          messages.map((m, i) => {
             const {
               sender,
               text,
@@ -38,9 +38,9 @@ export default class Messages extends React.Component {
             if (botNames.includes(sender)) {
               // Overwrite sender to have consistency (see MessageLoader@componentDidMount)
               m.sender = 'bot';
-              return <BotMessage key={text} message={m} />;
+              return <BotMessage key={i} message={m} />;
             } else {
-              return <UserMessage key={text} message={m} />;
+              return <UserMessage key={i} message={m} />;
             }
           })
         }
