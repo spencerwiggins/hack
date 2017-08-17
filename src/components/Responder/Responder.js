@@ -2,12 +2,10 @@
 import React from 'react';
 import Input from '../Input';
 import Send from '../Send';
-// import VoiceControl from '../VoiceControl';
-// import SpeechRecognizer from '../SpeechRecognizer';
 
 const style = {
   container: {
-    padding: 15,
+    padding: 10,
     display: 'flex',
   },
 };
@@ -23,12 +21,8 @@ const Responder = function Responder ({
 }: Props) {
   return (
     <form style={style.container} onSubmit={handleSubmit}>
-      {/* <VoiceControl /> */}
       <Input />
       <Send />
-      {/* <SpeechRecognizer
-        onSpeechResults={onSpeechResults}
-      /> */}
     </form>
   );
 };

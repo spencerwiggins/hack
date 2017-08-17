@@ -2,18 +2,12 @@
 import React from 'react';
 import Message from '../Message';
 
-// import type { ChatMessage } from 'eil-client-chat-state/types';
-//
-// type Props = {
-//   message: ChatMessage,
-// };
-
 const style = {
   container: {
     alignSelf: 'flex-end',
   },
   message: {
-    background: '#2483a2',
+    background: '#74667b',
     color: '#fff',
   },
 };

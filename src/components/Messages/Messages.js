@@ -3,12 +3,6 @@ import React from 'react';
 import BotMessage from '../BotMessage';
 import UserMessage from '../UserMessage';
 
-// import type { ChatMessage } from 'eil-client-chat-state/types';
-
-// type Props = {
-//   messages: Array<ChatMessage>,
-// };
-
 const style = {
   container: {
     display: 'flex',
@@ -20,7 +14,6 @@ const style = {
   },
 };
 
-// TODO: revisit when we start passing in bot and agent
 const botNames = [
   'bot',
   'Evie',

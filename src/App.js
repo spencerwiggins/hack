@@ -1,15 +1,15 @@
 // @flow
+
+// #4e3d31
+// #86a7a2
+// #74667b
 import React from 'react';
 import { Provider as ReduxProvider } from 'react-redux';
 import {
   BrowserRouter as Router,
   Route,
-  // Link
 } from 'react-router-dom';
-// import {
-//   // registerSocketListeners,
-//   // reduxDependencies,
-//  } from './businessLogic';
+
 import {
   createStore,
   compose,
@@ -27,9 +27,6 @@ const store = createStore(reducers, {}, compose(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 );
-
-// Register socket event listeners
-// registerSocketListeners(reduxDependencies.socket, store);
 
 const App = function App () {
   return (

@@ -5,14 +5,14 @@ import { ContentSend } from 'material-ui/svg-icons';
 const style = {
   button: {
     fontSize: 14,
-    background: '#2483a2',
+    background: '#86a7a2',
     color: '#fff',
     border: 'none',
     outline: 'none',
-    padding: 15,
+    padding: 10,
     borderTopRightRadius: 5,
     borderBottomRightRadius: 5,
-    fontFamily: 'sans-serif', // TODO: fontFamily across the board
+    fontFamily: 'sans-serif',
   },
 };
 

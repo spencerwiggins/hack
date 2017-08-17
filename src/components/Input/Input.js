@@ -15,7 +15,7 @@ const style = {
     paddingLeft: 15,
     paddingRight: 15,
     width: '100%',
-    border: '1px solid #2483a2',
+    border: '1px solid #86a7a2',
     outline: 'none',
     borderTopLeftRadius: 5,
     borderBottomLeftRadius: 5,

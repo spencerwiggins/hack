@@ -10,6 +10,43 @@ const initialState = {
   potentialNextUserMessage: null,
   botMessages: [
     {
+      sender: 'bot',
+      listings: [
+        {
+          title: 'Pines Lodge',
+          address: {
+            street: '2342 Pine Drive',
+            zip: '63105',
+            state: 'MO',
+            city: 'Clayton',
+          },
+          details: {
+            bed: '3',
+            bath: '2'
+          },
+          price: '$900/mo',
+          link: '/about',
+          image: '//photos.zillowstatic.com/p_h/ISybbo6qo5brlr1000000000.jpg',
+        },
+        {
+          title: 'Lodge Hill',
+          address: {
+            street: '6762 Lodge Drive',
+            zip: '63105',
+            state: 'MO',
+            city: 'Clayton',
+          },
+          details: {
+            bed: '3',
+            bath: '2'
+          },
+          price: '$850/mo',
+          link: '/about',
+          image: '//photos.zillowstatic.com/p_h/IS2fcy2aqdxow60000000000.jpg',
+        }
+      ]
+    },
+    {
       text: 'next bot message',
       sender: 'bot',
     },
@@ -20,9 +57,10 @@ const initialState = {
   ],
   messages: [
     {
-      text: 'hello',
+      text: 'hello from bot',
       sender: 'bot',
-    }
+    },
+
   ],
   conversationId: null,
   voiceInteractive: false,
