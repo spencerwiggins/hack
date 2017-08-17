@@ -1,7 +1,6 @@
 // @flow
 import update from 'react-addons-update';
 import * as types from '../constants/ActionTypes';
-// console.log(types);
 
 import type { ChatMessagesState } from '../../types';
 import { findMessageIndex } from '../businessLogic';
@@ -9,6 +8,18 @@ import { findMessageIndex } from '../businessLogic';
 const initialState = {
   potentialNextUserMessage: null,
   botMessages: [
+    {
+      text: 'We see that you have two children and are looking for a 3 bedroom.  Is that correct?',
+      sender: 'bot',
+    },
+
+
+    {
+      text: 'yet another bot message',
+      sender: 'bot',
+    },
+  ],
+  messages: [
     {
       sender: 'bot',
       listings: [
@@ -26,7 +37,8 @@ const initialState = {
           },
           price: '$900/mo',
           link: '/about',
-          image: '//photos.zillowstatic.com/p_h/ISybbo6qo5brlr1000000000.jpg',
+          image: '//photos.zillowstatic.com/p_h/IS2jf3s0j1zmrf1000000000.jpg',
+          rating: 4,
         },
         {
           title: 'Lodge Hill',
@@ -42,24 +54,15 @@ const initialState = {
           },
           price: '$850/mo',
           link: '/about',
-          image: '//photos.zillowstatic.com/p_h/IS2fcy2aqdxow60000000000.jpg',
+          image: '//photos.zillowstatic.com/p_h/IS66w2m64uer5z0000000000.jpg',
+          rating: 3,
         }
       ]
     },
-    {
-      text: 'next bot message',
-      sender: 'bot',
-    },
-    {
-      text: 'yet another bot message',
-      sender: 'bot',
-    },
-  ],
-  messages: [
-    {
-      text: 'hello from bot',
-      sender: 'bot',
-    },
+    // {
+    //   text: 'How can Gyde help you?',
+    //   sender: 'bot',
+    // },
 
   ],
   conversationId: null,

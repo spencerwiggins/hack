@@ -1,5 +1,5 @@
 .listing:first-of-type {
-  padding-bottom: 15px !important;
+  /*padding-bottom: 15px !important;*/
   margin-bottom: 15px !important;
-  border-bottom: 1px dashed #86a7a2;
+  /*border-bottom: 1px dashed #86a7a2;*/
 }

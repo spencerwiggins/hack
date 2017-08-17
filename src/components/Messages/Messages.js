@@ -44,7 +44,7 @@ export default class Messages extends React.Component {
             }
           })
         }
-        <div ref="bottomOfContainer" />
+        <div ref="bottomOfContainer" className="bottomOfContainer" />
       </div>
     );
   }
