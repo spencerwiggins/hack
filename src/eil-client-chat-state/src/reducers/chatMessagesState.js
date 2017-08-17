@@ -72,7 +72,7 @@ const initialState = {
     },
 
     {
-      text: 'Since your daugher Annie has asthma and you currently have carpet, would you like to find apartments with hard wood floors?',
+      text: 'Since your daughter Annie has asthma and you currently have carpet, would you like to find apartments with hard wood floors?',
       sender: 'bot',
     },
     {
