@@ -6,6 +6,25 @@ import type { ChatMessagesState } from '../../types';
 import { findMessageIndex } from '../businessLogic';
 
 
+// How can Gyde help you, Renee?
+//
+// I'd like to find an apartment in Clayton MO.
+//
+// Have there been any changes in your health, your family, or income?
+//
+// No, nothing has changed.
+//
+// Since Derek has asthma and you currently have carpet,
+// would you like to find apartments with hard wood floors?
+//
+// Yes, that would be great
+//
+// [show results]
+// [ click on some action item ]
+//
+//
+// // ranking, certification, landlord assistance
+
 const listings = [
   {
     title: 'Pines Lodge',
@@ -48,25 +67,24 @@ const initialState = {
   listings,
   botMessages: [
     {
-      text: 'We see that you have two children and are looking for a 3 bedroom.  Is that correct?',
+      text: 'Have there been any changes in your health, your family, or income?',
       sender: 'bot',
     },
-
 
     {
-      text: 'yet another bot message',
+      text: 'Since your son Derek has asthma and you currently have carpet, would you like to find apartments with hard wood floors?',
       sender: 'bot',
     },
-  ],
-  messages: [
     {
       sender: 'bot',
       listings
     },
-    // {
-    //   text: 'How can Gyde help you?',
-    //   sender: 'bot',
-    // },
+  ],
+  messages: [
+    {
+      text: 'How can Gyde help you, Renee?',
+      sender: 'bot',
+    }
 
   ],
   conversationId: null,

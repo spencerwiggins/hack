@@ -2,6 +2,7 @@
 import React from 'react';
 import Messages from '../Messages';
 import Responder from '../Responder';
+import AppBar from '../AppBar';
 
 const style = {
   container: {
@@ -12,13 +13,14 @@ const style = {
     right: 0,
     bottom: 0,
     left: 0,
-    fontFamily: 'sans-serif', // TODO: fontFamily across the board
+    fontFamily: 'sans-serif',
   },
 };
 
 const Window = function Window () {
   return (
     <div style={style.container}>
+      <AppBar />
       <Messages />
       <Responder />
     </div>
