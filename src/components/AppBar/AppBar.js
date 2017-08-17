@@ -13,7 +13,6 @@ const AppBarExampleIcon = () => (
       backgroundColor: '#74667b',
     }}
     title="Gyde"
-    iconClassNameRight="muidocs-icon-navigation-expand-more"
   />
 );
 

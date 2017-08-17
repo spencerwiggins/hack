@@ -11,6 +11,7 @@ type Props = {
 const style = {
   message: {
     background: '#f6f6f6',
+    color: '#333',
   },
 };
 
