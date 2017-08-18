@@ -18,7 +18,7 @@ const Landlord = () => (
   <Card>
     <CardHeader
       title="Ron B"
-      subtitle="Landlord"
+      subtitle="Landlord since 2007"
       avatar="http://www.material-ui.com/images/jsa-128.jpg"
     />
     {/* <CardMedia
@@ -26,7 +26,7 @@ const Landlord = () => (
     >
       <img src="http://www.material-ui.com/images/jsa-128.jpg" alt="" />
     </CardMedia> */}
-    <CardTitle title="Bio" subtitle="Landlord since 2007" />
+    {/* <CardTitle title="Bio" subtitle="" /> */}
     <CardText>
       <Chip
         style={styles.chip}
@@ -40,15 +40,23 @@ const Landlord = () => (
         style={styles.chip}
       >
         <Avatar icon={
+          <StarIcon />
+        } />
+        4 star unit rating
+      </Chip>
+      <Chip
+        style={styles.chip}
+      >
+        <Avatar icon={
           <CertIcon />
         } />
         Certified Landlord
       </Chip>
     </CardText>
     <CardActions>
-      <RaisedButton backgroundColor="#74667b" labelColor="#fff" label="Call" />
-      <RaisedButton backgroundColor="#74667b" labelColor="#fff" label="Report" />
-      <RaisedButton backgroundColor="#86a7a2" labelColor="#fff" label="Apply" />
+      <RaisedButton fullWidth style={{marginBottom: 3}} backgroundColor="#86a7a2" labelColor="#fff" label="Apply" />
+      <RaisedButton fullWidth style={{marginBottom: 3}} backgroundColor="#74667b" labelColor="#fff" label="Call" />
+      <RaisedButton fullWidth style={{marginBottom: 3}} backgroundColor="#74667b" labelColor="#fff" label="Report" />
     </CardActions>
   </Card>
 );

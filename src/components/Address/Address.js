@@ -1,6 +1,10 @@
 // @flow
 import React from 'react';
 
+const _style = {
+  fontSize: 14,
+}
+
 const Address = function Address (props: Props) {
   const {
     address: {
@@ -8,10 +12,10 @@ const Address = function Address (props: Props) {
       zip,
       state,
       city,
-    }
+    },
   } = props.listing;
   return (
-    <div style={{fontSize: 14}}>
+    <div style={{..._style, ...props.style}}>
       <div>{street}</div>
       <div>{city} {state} {zip}</div>
     </div>

@@ -12,12 +12,16 @@ const style = {
   },
   header: {
     fontFamily: 'Roboto, sans-serif',
-    marginBottom: 20,
+    marginBottom: 10,
+    marginTop: 10,
+    display: 'flex',
+    justifyContent: 'space-around',
+
   },
   title: {
     marginBottom: 10,
     fontWeight: 'bold',
-    fontSize: 24,
+    fontSize: 28,
     color: '#86a7a2',
   },
 };
@@ -34,7 +38,7 @@ const ListingDetail = function ListingDetail (props: Props) {
       <div style={style.innerContainer}>
         <div style={style.header}>
           <div style={style.title}>{listing.title}</div>
-          <Address listing={listing} />
+          <Address style={{fontSize: 13}} listing={listing} />
         </div>
         <Grid />
         <Landlord />
