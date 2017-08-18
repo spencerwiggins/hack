@@ -82,7 +82,7 @@ const initialState = {
   ],
   messages: [
     {
-      text: 'How can Gyde help you, Renee?',
+      text: 'How can Gyde help you today, Renee?',
       sender: 'bot',
     }
 
